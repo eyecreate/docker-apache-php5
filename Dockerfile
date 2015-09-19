@@ -13,6 +13,6 @@ php5enmod mcrypt && \
 rm -rf /var/lib/apt/lists/* && \
 cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer && \
 a2enmod rewrite && \
-cat '<Directory "/var/www/html"> AllowOverride All </Directory>' >> /etc/apache2/sites-available/000-default.conf && \
+echo '<Directory "/var/www/html"> AllowOverride All </Directory>' >> /etc/apache2/sites-available/000-default.conf && \
 service apache2 restart
 
